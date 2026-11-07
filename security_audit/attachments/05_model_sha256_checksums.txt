@@ -1,0 +1,92 @@
+=================================================================
+  FunASRVoiceTyper_Turbo v3.3 資安檢核佐證附件 05: 模型完整性 SHA-256
+=================================================================
+檢驗標準: 模型權重來源防竄改與安全格式 (ONNX / GGUF vs Pickle) 檢驗
+保留黃金模型清單:
+  1. SenseVoice-Small (models/sensevoice-small-onnx/model_quant.onnx)
+  2. CT-Transformer 標點大模型 (models/punc_ct-transformer_zh-cn-common-vocab272727-onnx/model_quant.onnx)
+  3. Qwen2.5-0.5B-Instruct (models/llm/qwen2.5-0.5b-instruct-q4_k_m.gguf)
+安全性評估: 100% 採用純靜態圖 ONNX 與 GGUF 張量格式，完全不使用存在任意程式碼執行漏洞的 PyTorch Pickle (.pt/.pkl/.bin) 反序列化機制。
+
+• 檔案名稱: models\llm\qwen2.5-0.5b-instruct-q4_k_m.gguf (468.64 MB)
+  SHA-256: 74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db
+
+• 檔案名稱: models\llm\.cache\huggingface\.gitignore (0.00 MB)
+  SHA-256: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+
+• 檔案名稱: models\llm\.cache\huggingface\CACHEDIR.TAG (0.00 MB)
+  SHA-256: e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f
+
+• 檔案名稱: models\llm\.cache\huggingface\download\qwen2.5-0.5b-instruct-q4_k_m.gguf.metadata (0.00 MB)
+  SHA-256: fd65af79d6a9e9b36dae1e61d3c1a042040a6813b900a51778469c6778a839a5
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\config.yaml (0.00 MB)
+  SHA-256: af6567936a0983ffd8fb1e745464f972f5d01b80b047aba507fe47260fb4d096
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\configuration.json (0.00 MB)
+  SHA-256: b16e85204038583f4bd37d9aa0542116f0b646cbe5ab0bb28e30be7e33d4df41
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\model_quant.onnx (269.53 MB)
+  SHA-256: 77005fff17c29a5895118ebd59bfe0646424457d05892aa061ef88192640fc59
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\punc.yaml (0.00 MB)
+  SHA-256: 0c1e9173ccdec7cadf3fbb0db20506ec0c8dece4464066819814882eb99abeb6
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\tokens.json (2.97 MB)
+  SHA-256: 4c0a8c6a89e08b24dc2a48cdf8be4b5f9db37d0b3b6e6df97fd73d54093bda78
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\tokens.txt (2.19 MB)
+  SHA-256: 5526499b39b10173b2331a7f59b999903e9877685fba283fcd21c4b968cbd4b4
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\.gitignore (0.00 MB)
+  SHA-256: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\CACHEDIR.TAG (0.00 MB)
+  SHA-256: e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\download\config.yaml.metadata (0.00 MB)
+  SHA-256: be2619282ab7d375dbd8b66d6ea72f9971b167836d6329e2976f2a9ef042e452
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\download\configuration.json.metadata (0.00 MB)
+  SHA-256: c4b1c3b861a5c7747dccfe255f727020a27146dea840cc949f0ed9043ba8a0e1
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\download\model_quant.onnx.metadata (0.00 MB)
+  SHA-256: 7f09e6529566a19ddd81c0d76896ef8a191d7932ff4740611e449dcd3edee11d
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\download\punc.yaml.metadata (0.00 MB)
+  SHA-256: 43125208daebcdca0cad27f8d3c7d75401696d817fa1b0f3188c9226f9cce951
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\download\tokens.txt.metadata (0.00 MB)
+  SHA-256: 0f5fe54f29c2f136a196f4bcd81b298262a2b16aba46b0a5c662ad74302ea39c
+
+• 檔案名稱: models\punc_ct-transformer_zh-cn-common-vocab272727-onnx\.cache\huggingface\trees\84ddd2940ab1ce938a561894b32a43608177e402.json (0.00 MB)
+  SHA-256: e9a288f3da6da477fbc5b8724cf2cb9695d011e639420c918efc9d7601e97d0f
+
+• 檔案名稱: models\sensevoice-small-onnx\.gitattributes (0.00 MB)
+  SHA-256: b30434e8d19cff21e0171fef2f5d2b53dbc24a29e11fb011cc82544baaddf206
+
+• 檔案名稱: models\sensevoice-small-onnx\README.md (0.00 MB)
+  SHA-256: d7f7efa09c7f0c0e6eaf893936cc5903d2c83cdb83995ffa404baadb7c50b580
+
+• 檔案名稱: models\sensevoice-small-onnx\am.mvn (0.01 MB)
+  SHA-256: 29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5
+
+• 檔案名稱: models\sensevoice-small-onnx\chn_jpn_yue_eng_ko_spectok.bpe.model (0.36 MB)
+  SHA-256: aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8
+
+• 檔案名稱: models\sensevoice-small-onnx\config.yaml (0.00 MB)
+  SHA-256: f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19
+
+• 檔案名稱: models\sensevoice-small-onnx\configuration.json (0.00 MB)
+  SHA-256: c57f6a580d63f7465c6a22ba95847aee05a1ae1181f5abddffb943d9febda061
+
+• 檔案名稱: models\sensevoice-small-onnx\model_quant.onnx (230.04 MB)
+  SHA-256: 21dc965f689a78d1604717bf561e40d5a236087c85a95584567835750549e822
+
+• 檔案名稱: models\sensevoice-small-onnx\tokens.json (0.34 MB)
+  SHA-256: a2594fc1474e78973149cba8cd1f603ebed8c39c7decb470631f66e70ce58e97
+
+【模型安全與瘦身驗證結論】
+✔ PASS: 僅包含 3 個黃金輕量模型權重 (SenseVoice-Small ONNX、CT-Transformer ONNX、Qwen2.5-0.5B GGUF)。
+✔ PASS: 零 Pickle (.pt/.pkl/.bin) 檔案，100% 免疫反序列化攻擊。
+

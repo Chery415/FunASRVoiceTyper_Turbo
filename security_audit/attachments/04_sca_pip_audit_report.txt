@@ -1,0 +1,12 @@
+=================================================================
+  FunASRVoiceTyper_Turbo 資安檢核佐證附件 04: 開源套件弱點掃描 (SCA)
+=================================================================
+掃描工具: pip-audit v2.10.1 (Powered by Google OSV & PyPI Advisory DB)
+掃描範圍: 本專案全數相依第三方函式庫與核心推論庫
+安全門檻: 無已知重大 (Critical) 或高風險 (High) CVE 漏洞
+
+【SCA 弱點比對檢測結果】
+Name             Skip Reason
+---------------- -------------------------------------------------------------------------------
+funasrvoicetyper Dependency not found on PyPI and could not be audited: funasrvoicetyper (0.1.0)
+

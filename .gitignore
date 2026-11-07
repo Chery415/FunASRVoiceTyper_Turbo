@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Model checkpoints and large binaries (crucial for FunASR / SenseVoice)
+models/
+*.onnx
+*.pt
+*.bin
+*.tar.gz
+*.zip
+*.gguf
+
+# Logs and databases
+*.log
+*.sqlite3
+test_out.txt
+
+# Agents and local config
+.agents/
+.gemini/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local secrets & environment
+.env
+.env.local

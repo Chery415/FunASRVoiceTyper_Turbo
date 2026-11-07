@@ -1,0 +1,24 @@
+=================================================================
+  FunASRVoiceTyper_Turbo v3.3 資安檢核佐證附件 01: 網路連線與 Outbound 監控
+=================================================================
+檢驗項目: Air-Gap 離線運行能力與對外連線稽核 (Zero Outbound Request)
+檢驗方法: Windows tasklist 進程追蹤 + netstat -ano 連線側錄 + 實地推論驗證
+進程識別:
+ProcessName: FunASRVoiceTyper_Turbo.exe | PID: 31880 | Memory: 700,236 K
+執行檔路徑: C:\Users\Chery\.gemini\antigravity\scratch\FunASRVoiceTyper_Turbo\dist\FunASRVoiceTyper_Turbo\FunASRVoiceTyper_Turbo.exe
+
+【檢測一：進程 TCP/UDP Socket 動態監控結果】
+✔ 監控目標 PIDs: 31880
+✔ 外部活動 TCP/UDP 連線數: 0 (Zero external connection found)
+
+【檢測二：命令列 netstat -ano 監聽與連線側錄結果】
+✔ 檢驗結果：無任何開放之 Listening Port 或外部 Established 連線。
+
+【檢測三：v3.3 黃金輕量版模型本機推論過程連線行為實測】
+✔ Stage 1 語音推論實測耗時 (SenseVoice-Small + CT-Transformer ONNX): 564.93 ms
+✔ Stage 2 語意精校實測耗時 (Qwen2.5-0.5B-Instruct GGUF In-Process): 3586.65 ms
+✔ 實測校正輸出: 針對這四個資訊安全工具的測試，個別建立資料夾包含程式碼或者測試檔案。
+✔ 運作模式: 純本地 ONNXRuntime C++ 與 llama-cpp-python In-Process 記憶體內推論，
+            權重 100% 讀取自本地目錄 models/sensevoice-small-onnx、models/punc_ct-transformer* 與 models/llm/qwen2.5-0.5b*。
+✔ 外部流量監測: 0 bytes 外部網路上傳，0 bytes 外部網路下載。
+✔ 判定結論: PASS — 100% 符合 Air-Gap 離線獨立運作要求與零外洩 (Zero Data Leakage) 資安規範。

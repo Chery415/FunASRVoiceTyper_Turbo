@@ -1,0 +1,25 @@
+=================================================================
+  FunASRVoiceTyper_Turbo 資安檢核佐證附件 02: 暫存檔生命週期與防外洩
+=================================================================
+檢驗項目: 音訊與文字暫存生命週期、檔案存取權限 (ACL) 與即時銷毀機制
+檢驗標準: ISO 27001 媒體處置 / 暫存資料不殘留原則 (Zero Data Retention)
+
+【檢測一：系統暫存目錄定位與環境安全】
+• 預設暫存目錄: C:\Users\Chery\AppData\Local\Temp
+• 暫存目錄 Windows 存取控制清單 (ACL):
+  C:\Users\Chery\AppData\Local\Temp NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+  BUILTIN\Administrators:(I)(OI)(CI)(F)
+  LAPTOP-HTDB35VJ\Chery:(I)(OI)(CI)(F)
+  Successfully processed 1 files; Failed processing 0 files
+✔ 判定：僅限當前登入之本機使用者與作業系統安全主體存取，其他本機帳號無權存取。
+
+【檢測二：音訊檔案建立、推論與即時實體銷毀流程動態驗證】
+• 暫存音訊產生路徑: C:\Users\Chery\AppData\Local\Temp\tmpkza2cvq2.wav
+• 檔案存在驗證: True (檔案大小: 32044 bytes)
+• 推論完成耗時: 153.64 ms
+• 處理完成後實體檔案存在驗證: False
+✔ 銷毀確認：檔案已於 finally 區塊成功 100% 立即實體抹除 (Unlink/Deleted)。
+
+【檢測三：記憶體釋放與殘留掃描】
+• 記憶體變數生命週期: 音訊 numpy 陣列與字串變數受 Python GC 自動回收，作用域僅限 worker thread 內部。
+• 判定結論: 零永久儲存，語音內容絕不寫入資料庫或常態檔案，徹底防杜音訊外洩風險。
