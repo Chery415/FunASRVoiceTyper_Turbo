@@ -434,19 +434,19 @@ class HybridVoiceTyperApp:
                 "打字與段落重編模式 (Typing Mode)",
                 pystray.Menu(
                     pystray.MenuItem(
-                        "🟢 極速打字模式 (Instant - 0ms免LLM・即時標點上屏) [組合16]",
+                        "🟢 極速打字模式 (Instant - 0ms免LLM・即時標點上屏)",
                         make_mode_setter("instant"),
                         checked=is_mode_current("instant"),
                         radio=True
                     ),
                     pystray.MenuItem(
-                        "🟣 流暢修訂與同音精校 (Typeless - 0.5B極速修錯字/潤飾 - 推薦) [組合17]",
+                        "🟣 流暢修訂與同音精校 (Typeless - 0.5B極速修錯字/潤飾 - 推薦)",
                         make_mode_setter("typeless"),
                         checked=is_mode_current("typeless"),
                         radio=True
                     ),
                     pystray.MenuItem(
-                        "🔵 結構化闡述與指令模式 (Structured - 長篇重組為條理重點) [組合18]",
+                        "🔵 結構化闡述與指令模式 (Structured - 長篇重組為條理重點)",
                         make_mode_setter("structured"),
                         checked=is_mode_current("structured"),
                         radio=True
