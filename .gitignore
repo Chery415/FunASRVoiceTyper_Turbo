@@ -17,14 +17,16 @@ venv/
 ENV/
 env/
 
-# Model checkpoints and large binaries (crucial for FunASR / SenseVoice)
+# Model checkpoints and large binaries
 models/
 *.onnx
 *.pt
 *.bin
 *.tar.gz
-*.zip
 *.gguf
+*.zip
+!FunASRVoiceTyper_Turbo_SourceCode.zip
+!FunASRVoiceTyper_Turbo_Installer.zip
 
 # Logs and databases
 *.log
@@ -48,6 +50,35 @@ $RECYCLE.BIN/
 *.swp
 *.swo
 
-# Local secrets & environment
-.env
-.env.local
+# 內部開發、細項腳本與本機程式碼 (已完整封裝於 SourceCode.zip 與 Installer.zip)
+api/
+core/
+package_assets/
+main.py
+config.json
+pyproject.toml
+FunASRVoiceTyper_Turbo.spec
+build_package.py
+build_release.py
+download_upgrade_models.py
+啟動語音輸入_極速版.bat
+audit_step*.py
+build_security_report.py
+generate_audit_diagrams.py
+generate_checklist_diagram.py
+create_release_zips.py
+build_v33_manual.py
+generate_manual_assets.py
+make_docx.py
+test_*.py
+security_audit/
+asr_accuracy_and_speed_plan/
+lean_golden_edition_plan/
+speed_optimization_plan/
+upgrade_execution_plan/
+*資安測試審查自評報告*
+debug_start_hybrid.bat
+start_hybrid.bat
+start_sensevoice.bat
+啟動語音打字_*.bat
+GEMINI.md
